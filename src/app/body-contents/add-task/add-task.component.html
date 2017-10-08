@@ -1,0 +1,49 @@
+<div class="add-task">
+  <p>Add New Task</p><br>
+  <!-- Add Task -->
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>People</th>
+      <th>Skills Needed</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+    <tr>
+      <td>
+        <kendo-maskedtextbox
+          name="title"
+          [(ngModel)]="title"
+          >
+          </kendo-maskedtextbox>
+      </td>
+      <td>
+        <kendo-dropdownlist
+            [data]="peoples"
+            [textField]="'name'"
+            [valueField]="'id'"
+            [valuePrimitive]="true"
+            [value]="selectedPeople"
+            [(ngModel)]="selectedPeople"
+        >
+        </kendo-dropdownlist>
+      </td>
+      <td>
+        <kendo-multiselect [data]="skills" [textField]="'name'"
+            [valueField]="'id'" [(ngModel)]="selectedSkills"></kendo-multiselect>
+      </td>
+      <td>
+        <kendo-datepicker [disabled]="false" [(ngModel)]="startDate" [value]="startDate"></kendo-datepicker>
+      </td>
+      <td>
+        <kendo-datepicker [disabled]="false" [(ngModel)]="endDate" [value]="endDate"></kendo-datepicker>
+      </td>
+      <td>
+        <button style="float: right;" [disabled]="!title" kendoButton [primary]="true" (click)="addTask()">
+           Add Task
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

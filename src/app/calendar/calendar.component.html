@@ -1,0 +1,21 @@
+<div id="calendar-v1">
+  <span class="title">Calendar - Task Management</span>
+  <span [ngStyle]="{'background-color': todoColor}">ToDo Task</span>
+  <span [ngStyle]="{'background-color': inprogressColor}">In Progress Task</span>
+  <span [ngStyle]="{'background-color': completeColor}">Completed Task</span>
+  <angular2-fullcalendar class="calendar" [options]="calendarOptions" id="mycal" #mycal></angular2-fullcalendar>
+
+  <div class="popup-wrapper">
+    <kendo-dialog title="{{seletedPeopleName}} Details" *ngIf="opened" (close)="close('cancel')">
+        <div class="main-body">
+          <img src="{{selectedPeoplePhoto}}" alt="{{seletedPeopleName}}">
+          <h2>{{seletedPeopleName}}</h2>
+          <h4>{{selectedPeopleDesignation}}</h4>
+        </div>
+        <kendo-dialog-actions>
+            <button kendoButton (click)="close('start')"><span class="k-icon k-i-star k-icon-64"></span></button>
+            <button kendoButton (click)="close('love')" primary="true"><span class="k-icon k-i-heart k-icon-64"></span></button>
+        </kendo-dialog-actions>
+    </kendo-dialog>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+*, html {
+    margin:0;
+    padding:0;  
+}
+body {
+   margin: 0;
+   padding: 0;
+}
+#loading-bar .bar {
+  background: #d35400;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  #d35400;
+  border-left-color: #d35400;
+}
+#loading-bar .peg {
+  -moz-box-shadow: #d35400 1px 0 6px 1px;
+  -ms-box-shadow: #d35400 1px 0 6px 1px;
+  -webkit-box-shadow: #d35400 1px 0 6px 1px;
+  box-shadow: #d35400 1px 0 6px 1px;
+}
+
+.loading-spinner {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+/* Start Spinner Loader */
+.spinner-background {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #d35400;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  line-height: 1.5em;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.spinner {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 999;
+  height: 4em;
+  width: 4em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* End Spinner Loader */

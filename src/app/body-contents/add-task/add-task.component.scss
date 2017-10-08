@@ -1,0 +1,17 @@
+.add-task {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  display: inline-block;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6358;
+  }
+  table {
+    display: inline-block;
+    td, th {
+      padding: 5px;
+    }
+  }
+}

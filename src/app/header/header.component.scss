@@ -1,0 +1,34 @@
+header {
+    background-color: #ff6358;
+    padding: 1.5em;
+    .left {
+      display: -webkit-inline-box;
+      .logo {
+        width: 100px;
+        border-bottom-right-radius: 2px;
+        border-right: 1.5px solid #ffffff;
+        font-size: 20px;
+        color: #fff;
+        font-family: serif;
+        margin-left: 2%;
+        margin-right: 4%;
+        font-weight: bold;
+      }
+      .links {
+        margin-left: 10%;
+        display: flex;
+        a {
+          margin-right: 10%;
+          font-size: 20px;
+          font-family: serif;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+    .right {
+      float: right;
+      font-size: 22px;
+      color: #ffffff;
+    }
+}

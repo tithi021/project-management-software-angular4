@@ -1,0 +1,60 @@
+/* Custom calendar style */
+#calendar-v1 {
+    .title {
+      font-size: 25px;
+    }
+    time.icon {
+        font-size: 1em;
+        /* change icon size */
+        
+        display: block;
+        position: relative;
+        width: 7em;
+        height: 7em;
+        background-color: #fff;
+        border-radius: 0.6em;
+        box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+        overflow: hidden;
+    }
+    .fc td,
+    .fc th {
+        border-color: transparent !important;
+        text-align: center;
+    }
+    .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+        float: none !important;
+    }
+    .fc-widget-content.fc-state-highlight:before {
+        content: '\00a0';
+        border: 1px solid #53aba8;
+        height: 100%;
+        width: calc(100% - 2px);
+        display: block;
+        position: relative;
+        background: transparent;
+    }
+    .fc-state-highlight {
+        background: none !important;
+    }
+    .fc-header-toolbar {
+        .fc-center {
+            h2 {
+                font-size: 20px;
+            }
+        }
+        .fc-button {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .fc-footer-toolbar {
+        .fc-center {
+            .fc-button {
+                background: transparent !important;
+                border: 1px solid #53aba8;
+                box-shadow: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.board {
+  width: 100%;
+  text-align: center;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6358;
+  }
+  img {
+    width: 30px;
+    border-radius: 50%;
+  }
+  .col-sm-3 {
+    margin-bottom: 2%;
+    height: 500px;
+  }
+  .remaining {
+    color: #ff6358;
+  }
+  .panel {
+    border-color: #d6e9c6;
+    height: 100%;
+    margin-bottom: 10%;
+    /* padding-bottom: 16%; */
+    min-height: 500px;
+    overflow: scroll;
+    .row {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+  }
+  .popup-wrapper {
+    .main-body {
+      text-align: center;
+      h2 {
+        font-size: 20px;
+      }
+      img {
+        width: 110px;
+      }
+      .people-name {
+        color: #33c8af !important;
+        p {
+          
+        }
+      }
+    }
+  }
+}

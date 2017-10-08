@@ -1,0 +1,73 @@
+.peoples {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6358;
+  }
+  img {
+    width: 50px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid #929e9e;
+    &:hover {
+      width: 70px;
+      border: 2px solid #ff6358;
+    }
+  }
+  .add-people {
+    border-radius: 50%;
+    .k-icon-64 {
+      font-size: 64px; /* Sets icon size to 64px */
+    }
+  }
+  #popup {
+    display: none;
+  }
+  &:hover {
+    #popup  {
+     display: block;
+     color: #ff6358;
+     font-size: 18px;
+   }
+  }
+  .popup-wrapper {
+    .main-body {
+      text-align: center;
+      h2 {
+        font-size: 20px;
+      }
+      img {
+        width: 110px;
+      }
+      .people-name {
+        p {
+          color: #33c8af !important;
+        }
+      }
+    }
+  }
+}
+
+.content {
+    padding: 30px;
+    color: #787878;
+    background-color: #fcf7f8;
+    border: 1px solid rgba(0,0,0,.05);
+  }
+
+  .anchor {
+    width: 80px;
+    height: 40px;
+  }
+
+  .example {
+      display: flex;
+      margin: auto 30px;
+  }
+
+  .example-content {
+      margin: 200px auto;
+  }

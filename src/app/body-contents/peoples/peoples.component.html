@@ -1,0 +1,71 @@
+<div class="peoples">
+  <p>Team Members</p><br>
+  <span class="contents" *ngFor="let people of peoples">
+    <button id="contents" kendoButton [primary]="true" [bare]="true" (click)="openShortProfile(people)">
+      <img src="{{people.photo}}" (mouseover)="mouseover(people.name)" (mouseleave)="mouseleave(people.name)" alt="{{people.name}}">
+    </button>
+    
+  </span>
+  
+  <button kendoButton [primary]="true" class="add-people" [bare]="true" (click)="openPopup()">
+    <span class="k-icon k-i-plus-outline k-icon-64"></span>
+  </button>
+  <br>
+
+  <div class="popup-wrapper">
+    <kendo-dialog title="{{seletedPeopleName}} Details" *ngIf="openedShortProfile" (close)="closeShortProfile('cancel')">
+        <div class="main-body">
+          <img src="{{selectedPeoplePhoto}}" alt="{{seletedPeopleName}}">
+          <h2>{{seletedPeopleName}}</h2>
+          <h4>{{selectedPeopleDesignation}}</h4>
+        </div>
+        <kendo-dialog-actions>
+            <button kendoButton (click)="closeShortProfile('start')"><span class="k-icon k-i-star k-icon-64"></span></button>
+            <button kendoButton (click)="closeShortProfile('love')" primary="true"><span class="k-icon k-i-heart k-icon-64"></span></button>
+        </kendo-dialog-actions>
+    </kendo-dialog>
+  </div>
+
+  <div id="popup" style="display: none">{{selectedName}}</div>
+
+  <kendo-dialog title="Add New Team Member!" *ngIf="opened" (close)="close()">
+
+    <form>
+      <table>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td><label>Name: </label> </td>
+                <td>
+                  <kendo-maskedtextbox
+                  name="name"
+                  [(ngModel)]="name"
+                  >
+                  </kendo-maskedtextbox>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Designation: </label> </td>
+                <td><kendo-maskedtextbox name="designation" [(ngModel)]="designation"></kendo-maskedtextbox>  </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <button style="float: right;" [disabled]="!name" kendoButton [primary]="true" (click)="addNewMember()">
+              Save
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <kendo-dialog-actions>
+        <button kendoButton (click)="close()" [primary]="true">Close</button>
+    </kendo-dialog-actions>
+  </kendo-dialog>
+    
+</div>
+
+
+
